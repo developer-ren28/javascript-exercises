@@ -4,14 +4,27 @@ const sumAll = function(...numArray) {
     let firstIndex = numArray[0];
     let secondIndex = numArray[1];
 
-    while(secondIndex !== firstIndex) {
+    if (firstIndex < secondIndex) {
+        while(firstIndex !== secondIndex) {
 
-        sum += firstIndex;
-        firstIndex++;
+            sum += firstIndex;
+            firstIndex++;
+            
+        }; 
+    
+        return sum;
         
-    }; 
+    } else if (firstIndex > secondIndex) {
+        while(secondIndex !== firstIndex) {
 
-    return sum;
+            sum += firstIndex;
+            firstIndex--;
+            
+        }; 
+    
+        return sum;
+    }
+    
 
 };
 
