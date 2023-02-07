@@ -6,11 +6,11 @@ const sumAll = function(...numArray) {
 
     if (firstIndex < 0 || 
         secondIndex < 0 || 
-        firstIndex !== (typeof 1) || 
-        secondIndex !== (typeof 1)) {
+        "number" !== (typeof firstIndex) || 
+        "number" !== (typeof secondIndex)) {
         
             return "ERROR";
-            
+
     } else if (firstIndex < secondIndex) {
         while(firstIndex !== secondIndex) {
 
