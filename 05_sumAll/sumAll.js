@@ -4,7 +4,14 @@ const sumAll = function(...numArray) {
     let firstIndex = numArray[0];
     let secondIndex = numArray[1];
 
-    if (firstIndex < secondIndex) {
+    if (firstIndex < 0 || 
+        secondIndex < 0 || 
+        firstIndex !== (typeof 1) || 
+        secondIndex !== (typeof 1)) {
+        
+            return "ERROR";
+            
+    } else if (firstIndex < secondIndex) {
         while(firstIndex !== secondIndex) {
 
             sum += firstIndex;
@@ -13,7 +20,7 @@ const sumAll = function(...numArray) {
         }; 
     
         return sum;
-        
+
     } else if (firstIndex > secondIndex) {
         while(secondIndex !== firstIndex) {
 
