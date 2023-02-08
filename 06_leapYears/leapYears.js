@@ -6,9 +6,12 @@ const leapYears = function(year) {
 
         return true;
 
-    } else {
-        return false;
-    }
+    } else if ((year % 100) === 0 && (year % 400) === 0) {
+
+        return true;
+    };
+
+    return false;
 
 };
 
