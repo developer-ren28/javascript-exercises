@@ -16,8 +16,16 @@ const sum = function(array) {
   return total;
 };
 
-const multiply = function(multiplicand, multiplier) {
-  return product = multiplicand * multiplier;
+const multiply = function([...numbers]) {
+  
+  let product = 1;
+
+  for(let i = 0; i < numbers.length; i++) {
+    product *= numbers[i];
+  };
+
+  return product;
+
 };
 
 const power = function(base, exponent) {
