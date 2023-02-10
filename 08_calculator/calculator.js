@@ -33,7 +33,10 @@ const power = function(base, exponent) {
 };
 
 const factorial = function(num) {
-  if (i > 1) {
+
+  if (num === 1 || num === 0 ) {
+    return 1;
+  } else if (num > 1) {
     let i = num;
   
     while (i > 1) {
@@ -45,7 +48,6 @@ const factorial = function(num) {
     return num;
   };
 
-  return num;
 };
 
 // Do not edit below this line
