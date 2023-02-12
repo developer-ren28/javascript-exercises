@@ -6,21 +6,22 @@ const fibonacci = function(nthMember) {
         return 'OOPS';
     };
   
-    let num = 1;
+    // let num = 1;
     let precedingNum = [1, 1];
     let sum = 1;
     let j = 0;
 
     for (i = 1; i < member; i++) {
 
-        sum += num;
+        sum += precedingNum[j];
         precedingNum.push(sum);
         j++;
-        num = precedingNum[j];
+        // num = precedingNum[j];
         
     };
 
-    return num;
+    // return num;
+    return precedingNum[j]
 };
 
 // Do not edit below this line
