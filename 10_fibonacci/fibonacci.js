@@ -1,27 +1,19 @@
 const fibonacci = function(nthMember) {
-    
-    let member = +nthMember;
-
     if (nthMember < 0) {
         return 'OOPS';
     };
-  
-    // let num = 1;
-    let precedingNum = [1, 1];
-    let sum = 1;
-    let j = 0;
 
-    for (i = 1; i < member; i++) {
-
-        sum += precedingNum[j];
-        precedingNum.push(sum);
+    let arr = [1, 1];
+    let i = 0;
+    let j = 1;
+    while(nthMember > arr.length) {
+        let x = arr[i] + arr[j];
+        arr.push(x);
+        i++;
         j++;
-        // num = precedingNum[j];
-        
-    };
+    }
 
-    // return num;
-    return precedingNum[j]
+    return arr[nthMember - 1];
 };
 
 // Do not edit below this line
